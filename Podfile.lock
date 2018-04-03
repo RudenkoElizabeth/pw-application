@@ -1,0 +1,31 @@
+PODS:
+  - Alamofire (4.7.1)
+  - MBProgressHUD (1.0.0)
+  - Moya (11.0.2):
+    - Moya/Core (= 11.0.2)
+  - Moya/Core (11.0.2):
+    - Alamofire (~> 4.1)
+    - Result (~> 3.0)
+  - Realm (3.3.1):
+    - Realm/Headers (= 3.3.1)
+  - Realm/Headers (3.3.1)
+  - RealmSwift (3.3.1):
+    - Realm (= 3.3.1)
+  - Result (3.2.4)
+
+DEPENDENCIES:
+  - MBProgressHUD (~> 1.0.0)
+  - Moya
+  - RealmSwift
+
+SPEC CHECKSUMS:
+  Alamofire: 68d7d521118d49c615a8d2214d87cdf525599d30
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  Moya: a725035953bc1c0eb1be505ab903984501d82440
+  Realm: 63ebf4903b446b0bdf2131244eb1e1549925c724
+  RealmSwift: f28fe8507bdfb8f1c924962401b83e7b9d7abb5c
+  Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
+
+PODFILE CHECKSUM: 9c2530d2abbac1b4390c9859172cd70dbc7e191c
+
+COCOAPODS: 1.4.0
