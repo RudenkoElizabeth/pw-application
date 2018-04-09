@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol TransactionViewModelDelegate {
+protocol TransactionViewModelDelegate: class {
     func showAlert(_ alertText: String)
     func reloadTableView()
 }
@@ -17,7 +17,7 @@ class TransactionViewModel: NSObject {
     
     let transactionsDatabaseService = TransactionsDatabaseService()
     let transactionsNetworkService = TransactionsNetworkService()
-    var delegate: TransactionViewModelDelegate?
+    weak var delegate: TransactionViewModelDelegate?
     var isAscending = false
     var sortType = 3
     var filterValue = ""

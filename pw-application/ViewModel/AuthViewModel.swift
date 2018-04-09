@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol AuthViewModelDelegate {
+protocol AuthViewModelDelegate: class {
     func succeessAuth()
     func errorAuth(_ errorText: String)
 }
@@ -17,7 +17,7 @@ class AuthViewModel: NSObject {
     
     let authNetworkService = AuthNetworkService()
     let profileNetworkService = ProfileNetworkService()
-    var delegate: AuthViewModelDelegate?
+    weak var delegate: AuthViewModelDelegate?
     
     override init() {
         super.init()

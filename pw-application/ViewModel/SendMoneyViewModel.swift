@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol SendMoneyViewModelDelegate {
+protocol SendMoneyViewModelDelegate: class {
     func sended()
     func error(_ errorText: String)
 }
@@ -17,7 +17,7 @@ class SendMoneyViewModel: NSObject {
     
     let transactionsNetworkService = TransactionsNetworkService()
     let profileNetworkService = ProfileNetworkService()
-    var delegate: SendMoneyViewModelDelegate?
+    weak var delegate: SendMoneyViewModelDelegate?
     
     override init() {
         super.init()

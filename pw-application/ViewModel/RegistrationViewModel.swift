@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol RegistrationViewModelDelegate {
+protocol RegistrationViewModelDelegate: class {
     func succeessRegistration()
     func errorRegistration(_ errorText: String)
 }
@@ -17,7 +17,7 @@ class RegistrationViewModel: NSObject {
     
     let authNetworkService = AuthNetworkService()
     let profileNetworkService = ProfileNetworkService()
-    var delegate: RegistrationViewModelDelegate?
+    weak var delegate: RegistrationViewModelDelegate?
     
     override init() {
         super.init()

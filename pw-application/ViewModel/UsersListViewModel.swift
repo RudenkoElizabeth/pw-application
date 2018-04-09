@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol UsersListViewModelDelegate {
+protocol UsersListViewModelDelegate: class {
     func usersList(_ usersArray: [String])
     func error(_ errorText: String)
 }
@@ -16,7 +16,7 @@ protocol UsersListViewModelDelegate {
 class UsersListViewModel:NSObject {
     
     let usersListNetworkService = UsersListNetworkService()
-    var delegate: UsersListViewModelDelegate?
+    weak var delegate: UsersListViewModelDelegate?
     
     override init() {
         super.init()
